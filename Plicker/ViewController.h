@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ResponseViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) ResponseViewController *responseViewController;
 
 @end

@@ -27,6 +27,8 @@
 		D04C7A3A1C40CF11006D4FB9 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D04C7A2A1C40CF11006D4FB9 /* UIRefreshControl+AFNetworking.m */; };
 		D04C7A3B1C40CF11006D4FB9 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D04C7A2C1C40CF11006D4FB9 /* UIWebView+AFNetworking.m */; };
 		D04C7A3D1C40D2B9006D4FB9 /* NetworkAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = D04C7A3C1C40D2B9006D4FB9 /* NetworkAccess.m */; };
+		D04C7A431C410EED006D4FB9 /* ResponseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D04C7A421C410EED006D4FB9 /* ResponseViewController.m */; };
+		D04C7A461C411A0C006D4FB9 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = D04C7A451C411A0C006D4FB9 /* back.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +75,9 @@
 		D04C7A2C1C40CF11006D4FB9 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		D04C7A3C1C40D2B9006D4FB9 /* NetworkAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkAccess.m; sourceTree = "<group>"; };
 		D04C7A3E1C40D2CD006D4FB9 /* NetworkAccess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkAccess.h; sourceTree = "<group>"; };
+		D04C7A421C410EED006D4FB9 /* ResponseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseViewController.m; sourceTree = "<group>"; };
+		D04C7A441C410F03006D4FB9 /* ResponseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseViewController.h; sourceTree = "<group>"; };
+		D04C7A451C411A0C006D4FB9 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,9 @@
 		D04C79EF1C40C7B3006D4FB9 /* Plicker */ = {
 			isa = PBXGroup;
 			children = (
+				D04C7A451C411A0C006D4FB9 /* back.png */,
+				D04C7A441C410F03006D4FB9 /* ResponseViewController.h */,
+				D04C7A421C410EED006D4FB9 /* ResponseViewController.m */,
 				D04C7A0A1C40CF10006D4FB9 /* AFNetworking */,
 				D04C7A181C40CF11006D4FB9 /* UIKit+AFNetworking */,
 				D04C79F31C40C7B3006D4FB9 /* AppDelegate.h */,
@@ -232,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04C7A461C411A0C006D4FB9 /* back.png in Resources */,
 				D04C79FD1C40C7B3006D4FB9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +265,7 @@
 				D04C79F21C40C7B3006D4FB9 /* main.m in Sources */,
 				D04C7A331C40CF11006D4FB9 /* AFAutoPurgingImageCache.m in Sources */,
 				D04C7A2F1C40CF11006D4FB9 /* AFSecurityPolicy.m in Sources */,
+				D04C7A431C410EED006D4FB9 /* ResponseViewController.m in Sources */,
 				D04C7A301C40CF11006D4FB9 /* AFURLRequestSerialization.m in Sources */,
 				D04C7A351C40CF11006D4FB9 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				D04C7A311C40CF11006D4FB9 /* AFURLResponseSerialization.m in Sources */,
