@@ -105,9 +105,9 @@
 		[self.tableView reloadData];
 	}];
 	
-	[self.view addSubview:headerView];
-	[self initTableView];
 	
+	[self initTableView];
+	[self.view addSubview:headerView];
 }
 
 - (void)didReceiveMemoryWarning {
