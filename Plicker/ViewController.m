@@ -48,6 +48,8 @@
 	self.responseViewController = [[ResponseViewController alloc] init];
 	self.responseViewController.responses = [dataArray objectAtIndex:[indexPath row]];
 	[self presentViewController:self.responseViewController animated:YES completion:nil];
+	
+	[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

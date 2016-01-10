@@ -82,7 +82,10 @@
 			NSData *data = [NSData dataWithContentsOfURL:url];
 			UIImage *img = [[UIImage alloc] initWithData:data];
 			
+//			NSURLRequest * urlRequest = [NSURLRequest requestWithURL:url];
+//			[bannerImageView loadRequest:urlRequest];
 			dispatch_async(dispatch_get_main_queue(), ^ {
+				
 				[bannerImageView setImage:img];
 			});
 		});
@@ -128,6 +131,14 @@
 		choiceLabel.textAlignment = NSTextAlignmentCenter;
 		choiceLabel.numberOfLines = 0;
 		
+		UILabel * freqLabel = [[UILabel alloc] initWithFrame:CGRectMake(choiceLabel.frame.origin.x, choiceLabel.frame.origin.y + choiceLabel.frame.size.height, choiceLabel.frame.size.width, 50)];
+		freqLabel.textColor = [UIColor colorWithRed:108.0/255.0 green:110.0/255.0 blue:110.0/255.0 alpha:1.0];
+		freqLabel.font = [UIFont fontWithName:@"Helvetica" size:12];
+		freqLabel.font = [UIFont systemFontOfSize:12 weight:UIFontWeightMedium];
+		freqLabel.textAlignment = NSTextAlignmentCenter;
+		freqLabel.numberOfLines = 2;
+		freqLabel.text = [NSString stringWithFormat:@"%lu%%\n%d out of %lu", [[answerFreq objectForKey:choice] intValue] * 100 / [[self.responses objectForKey:@"responses"] count], [[answerFreq objectForKey:choice] intValue], [[self.responses objectForKey:@"responses"] count]];
+		
 		if([arr count] == 0){
 			choiceLabel.text = choice;
 		}
@@ -135,6 +146,7 @@
 			choiceLabel.text = [[arr objectAtIndex:i] objectForKey:@"body"];
 			if ([[[arr objectAtIndex:i] objectForKey:@"correct"] intValue] == 1) {
 				choiceLabel.textColor = [UIColor greenColor];
+				freqLabel.textColor = [UIColor greenColor];
 				CALayer* layer = [choiceLabel layer];
 				CALayer *bottomBorder = [CALayer layer];
 				bottomBorder.borderColor = [UIColor darkGrayColor].CGColor;
@@ -147,13 +159,7 @@
 			}
 		}
 		
-		UILabel * freqLabel = [[UILabel alloc] initWithFrame:CGRectMake(choiceLabel.frame.origin.x, choiceLabel.frame.origin.y + choiceLabel.frame.size.height, choiceLabel.frame.size.width, 50)];
-		freqLabel.textColor = [UIColor colorWithRed:108.0/255.0 green:110.0/255.0 blue:110.0/255.0 alpha:1.0];
-		freqLabel.font = [UIFont fontWithName:@"Helvetica" size:12];
-		freqLabel.font = [UIFont systemFontOfSize:12 weight:UIFontWeightMedium];
-		freqLabel.textAlignment = NSTextAlignmentCenter;
-		freqLabel.numberOfLines = 2;
-		freqLabel.text = [NSString stringWithFormat:@"%lu%%\n%d out of %lu", [[answerFreq objectForKey:choice] intValue] * 100 / [[self.responses objectForKey:@"responses"] count], [[answerFreq objectForKey:choice] intValue], [[self.responses objectForKey:@"responses"] count]];
+		
 		
 		
 		
@@ -201,6 +207,9 @@
 	
 	bannerImageView = [[UIImageView alloc] init];//WithImage:img];
 	[bannerImageView setFrame:CGRectMake(0, headerView.frame.size.height + headerView.frame.origin.y, self.view.frame.size.width, 230)];
+//	bannerImageView = [[UIWebView alloc] init];
+//	bannerImageView.scalesPageToFit = YES;
+	
 	bannerImageView.contentMode = UIViewContentModeScaleToFill;
 	bannerImageView.clipsToBounds = YES;
 	
