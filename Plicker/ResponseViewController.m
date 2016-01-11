@@ -34,6 +34,14 @@
 	}
 }
 
+- (void)detailsButtonNormal:(UIButton *)sender {
+	
+}
+
+- (void)detailsTouchDown:(UIButton *) sender {
+
+}
+
 - (void)backButtonNormal:(UIButton *)sender {
 	
 }
@@ -159,12 +167,24 @@
 			}
 		}
 		
+		UIView * detailsButtonLine = [[UIView alloc] initWithFrame:CGRectMake(0, view.frame.size.height - 50, view.frame.size.width, 1)];
+		detailsButtonLine.backgroundColor = [UIColor colorWithRed:235.0/255.0 green:235.0/255.0 blue:235.0/255.0 alpha:1.0];
 		
+		UIButton * detailsButton = [UIButton buttonWithType:UIButtonTypeCustom];
+		[detailsButton setTitle:@"Details" forState:UIControlStateNormal];
+		detailsButton.frame = CGRectMake(10, view.frame.size.height - 40, view.frame.size.width - 20, 30);
+		[detailsButton.titleLabel setFont:[UIFont fontWithName:@"Helvetica" size:14]];
+		[detailsButton.titleLabel setFont:[UIFont systemFontOfSize:14 weight:UIFontWeightMedium]];
+		[detailsButton setTitleColor:[UIColor colorWithRed:108.0/255.0 green:110.0/255.0 blue:110.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+		[detailsButton addTarget:self action:@selector(detailsTouchDown:) forControlEvents:UIControlEventTouchDown];
+		[detailsButton addTarget:self action:@selector(detailsButtonNormal:) forControlEvents:UIControlEventTouchUpInside];
 		
 		
 		
 		[view addSubview:choiceLabel];
 		[view addSubview:freqLabel];
+		[view addSubview:detailsButton];
+		[view addSubview:detailsButtonLine];
 //		view.backgroundColor = [UIColor colorWithRed:50 * i / 255.0 green:100.0/255.0 blue:100.0/255.0 alpha:1.0];
 		
 		[responsesView addSubview:view];
