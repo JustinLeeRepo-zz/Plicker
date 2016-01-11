@@ -139,6 +139,10 @@
 		choiceLabel.textAlignment = NSTextAlignmentCenter;
 		choiceLabel.numberOfLines = 0;
 		
+
+		
+	
+		
 		UILabel * freqLabel = [[UILabel alloc] initWithFrame:CGRectMake(choiceLabel.frame.origin.x, choiceLabel.frame.origin.y + choiceLabel.frame.size.height, choiceLabel.frame.size.width, 50)];
 		freqLabel.textColor = [UIColor colorWithRed:108.0/255.0 green:110.0/255.0 blue:110.0/255.0 alpha:1.0];
 		freqLabel.font = [UIFont fontWithName:@"Helvetica" size:12];
@@ -167,9 +171,8 @@
 			}
 		}
 		
-		UIView * detailsButtonLine = [[UIView alloc] initWithFrame:CGRectMake(0, view.frame.size.height - 50, view.frame.size.width, 1)];
-		detailsButtonLine.backgroundColor = [UIColor colorWithRed:235.0/255.0 green:235.0/255.0 blue:235.0/255.0 alpha:1.0];
 		
+	
 		UIButton * detailsButton = [UIButton buttonWithType:UIButtonTypeCustom];
 		[detailsButton setTitle:@"Details" forState:UIControlStateNormal];
 		detailsButton.frame = CGRectMake(10, view.frame.size.height - 40, view.frame.size.width - 20, 30);
@@ -179,9 +182,15 @@
 		[detailsButton addTarget:self action:@selector(detailsTouchDown:) forControlEvents:UIControlEventTouchDown];
 		[detailsButton addTarget:self action:@selector(detailsButtonNormal:) forControlEvents:UIControlEventTouchUpInside];
 		
-		
+		UIView * detailsButtonLine = [[UIView alloc] initWithFrame:CGRectMake(0, view.frame.size.height - 50, view.frame.size.width, 1)];
+		detailsButtonLine.backgroundColor = [UIColor colorWithRed:235.0/255.0 green:235.0/255.0 blue:235.0/255.0 alpha:1.0];
+	
+		UIView * columnLine = [[UIView alloc] initWithFrame:CGRectMake(choiceSize, detailsButtonLine.frame.origin.y, 1, view.frame.size.height - detailsButton.frame.origin.y + 10)];
+		columnLine.backgroundColor = [UIColor colorWithRed:235.0/255.0 green:235.0/255.0 blue:235.0/255.0 alpha:1.0];
 		
 		[view addSubview:choiceLabel];
+
+		[view addSubview:columnLine];
 		[view addSubview:freqLabel];
 		[view addSubview:detailsButton];
 		[view addSubview:detailsButtonLine];
