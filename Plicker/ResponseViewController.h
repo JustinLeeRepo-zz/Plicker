@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DetailsViewController.h"
 
 @interface ResponseViewController : UIViewController
 
+@property (nonatomic, strong) DetailsViewController *detailsViewController;
 @property (strong,nonatomic) NSDictionary *responses;
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D04297501C44A5F700B78F56 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D042974F1C44A5F700B78F56 /* DetailsViewController.m */; };
 		D04C79F21C40C7B3006D4FB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D04C79F11C40C7B3006D4FB9 /* main.m */; };
 		D04C79F51C40C7B3006D4FB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D04C79F41C40C7B3006D4FB9 /* AppDelegate.m */; };
 		D04C79FD1C40C7B3006D4FB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D04C79FC1C40C7B3006D4FB9 /* Assets.xcassets */; };
@@ -32,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D042974F1C44A5F700B78F56 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		D04297511C44A61100B78F56 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		D04C79ED1C40C7B2006D4FB9 /* Plicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D04C79F11C40C7B3006D4FB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D04C79F31C40C7B3006D4FB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 		D04C79EF1C40C7B3006D4FB9 /* Plicker */ = {
 			isa = PBXGroup;
 			children = (
+				D042974F1C44A5F700B78F56 /* DetailsViewController.m */,
+				D04297511C44A61100B78F56 /* DetailsViewController.h */,
 				D04C7A451C411A0C006D4FB9 /* back.png */,
 				D04C7A441C410F03006D4FB9 /* ResponseViewController.h */,
 				D04C7A421C410EED006D4FB9 /* ResponseViewController.m */,
@@ -270,6 +275,7 @@
 				D04C7A351C40CF11006D4FB9 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				D04C7A311C40CF11006D4FB9 /* AFURLResponseSerialization.m in Sources */,
 				D04C7A2D1C40CF11006D4FB9 /* AFHTTPSessionManager.m in Sources */,
+				D04297501C44A5F700B78F56 /* DetailsViewController.m in Sources */,
 				D04C7A341C40CF11006D4FB9 /* AFImageDownloader.m in Sources */,
 				D04C7A361C40CF11006D4FB9 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 			);
@@ -401,6 +407,7 @@
 				D04C7A061C40C7B3006D4FB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
